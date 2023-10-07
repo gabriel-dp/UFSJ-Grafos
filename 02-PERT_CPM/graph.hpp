@@ -35,6 +35,39 @@ class Edge {
     }
 };
 
+class VertexGroup {
+   private:
+    std::set<Vertex> vertexes;
+
+   public:
+    std::set<Vertex> getVertexes() {
+        return vertexes;
+    }
+
+    void insert(Vertex v) {
+        vertexes.insert(v);
+    }
+
+    void remove(Vertex v) {
+        vertexes.erase(v);
+    }
+
+    bool find(Vertex v) {
+        return vertexes.find(v) != vertexes.end();
+    }
+
+    void clear() {
+        vertexes.clear();
+    }
+
+    bool contains(VertexGroup group) {
+        for (Vertex v : group.getVertexes()) {
+            if (!find(v)) return false;
+        }
+        return true;
+    }
+};
+
 class Graph {
    private:
     std::set<Vertex> vertexes;
@@ -77,38 +110,22 @@ class Graph {
         return outEdges;
     }
 
+    VertexGroup getOutGroup(Vertex v) {
+        VertexGroup outVertexes;
+        for (Edge e : getOutEdges(v)) {
+            if (e.getOrigin() == v) {
+                outVertexes.insert(e.getDestination());
+            }
+        }
+        return outVertexes;
+    }
+
     Graph generateReverseGraph() {
         Graph reverse;
         for (auto edge : edges) {
             reverse.addEdge(edge.getDestination(), edge.getOrigin(), edge.getLength());
         }
         return reverse;
-    }
-};
-
-class VertexGroup {
-   private:
-    std::set<Vertex> vertexes;
-
-   public:
-    std::set<Vertex> getVertexes() {
-        return vertexes;
-    }
-
-    void insert(Vertex v) {
-        vertexes.insert(v);
-    }
-
-    void remove(Vertex v) {
-        vertexes.erase(v);
-    }
-
-    bool find(Vertex v) {
-        return vertexes.find(v) != vertexes.end();
-    }
-
-    void clear() {
-        vertexes.clear();
     }
 };
 

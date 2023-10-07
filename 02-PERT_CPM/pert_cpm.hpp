@@ -28,6 +28,7 @@ class Pert {
         for (Vertex vr : reverse.getVertexes()) {
             if (reverse.getOutEdges(vr).size() == 0) {
                 search.push(vr);
+                history.insert(vr);
                 times[vr].first = 0;  // Sets Earliest time to 0
             }
         }
@@ -39,11 +40,14 @@ class Pert {
             for (Edge e : graph.getOutEdges(actual)) {
                 Vertex dest = e.getDestination();
                 if (!history.find(dest)) {
-                    search.push(dest);
                     times[dest].first = times[actual].first + e.getLength();
                     history.insert(dest);
                 } else {
                     times[dest].first = std::max(times[dest].first, times[actual].first + e.getLength());
+                }
+
+                if (history.contains(reverse.getOutGroup(dest))) {
+                    search.push(dest);
                 }
             }
         }
@@ -55,6 +59,7 @@ class Pert {
         for (Vertex v : graph.getVertexes()) {
             if (graph.getOutEdges(v).size() == 0) {
                 search.push(v);
+                history.insert(v);
                 times[v].second = times[v].first;  // Sets latest time to early
             }
         }
@@ -66,11 +71,14 @@ class Pert {
             for (Edge e : reverse.getOutEdges(actual)) {
                 Vertex dest = e.getDestination();
                 if (!history.find(dest)) {
-                    search.push(dest);
                     times[dest].second = times[actual].second - e.getLength();
                     history.insert(dest);
                 } else {
-                    times[dest].first = std::min(times[dest].second, times[actual].second - e.getLength());
+                    times[dest].second = std::min(times[dest].second, times[actual].second - e.getLength());
+                }
+
+                if (history.contains(graph.getOutGroup(dest))) {
+                    search.push(dest);
                 }
             }
         }
