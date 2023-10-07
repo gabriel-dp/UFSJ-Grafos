@@ -86,4 +86,30 @@ class Graph {
     }
 };
 
+class VertexGroup {
+   private:
+    std::set<Vertex> vertexes;
+
+   public:
+    std::set<Vertex> getVertexes() {
+        return vertexes;
+    }
+
+    void insert(Vertex v) {
+        vertexes.insert(v);
+    }
+
+    void remove(Vertex v) {
+        vertexes.erase(v);
+    }
+
+    bool find(Vertex v) {
+        return vertexes.find(v) != vertexes.end();
+    }
+
+    void clear() {
+        vertexes.clear();
+    }
+};
+
 #endif
