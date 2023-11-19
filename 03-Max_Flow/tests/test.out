@@ -1,0 +1,10 @@
+Edge (0 -> 1) flow: 4
+Edge (1 -> 3) flow: 0
+Edge (3 -> 5) flow: 8
+Edge (4 -> 3) flow: 7
+Edge (4 -> 5) flow: 0
+Edge (2 -> 4) flow: 10
+Edge (3 -> 2) flow: 9
+Edge (2 -> 1) flow: 4
+Edge (0 -> 2) flow: 9
+Max Flow = 16
