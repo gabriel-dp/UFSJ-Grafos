@@ -4,12 +4,14 @@ All works made during Graphs subject taught by Professor Vinicius Vieira
 
 ## Works
 
-- [`> Componentes Fortemente Conectados <`](./01-CFC/)
+1) &nbsp;[`> Componentes Fortemente Conectados <`](./01-CFC/)
 
-- [`> PERT/CPM <`](./02-PERT_CPM/)
+2) &nbsp;[`> PERT/CPM <`](./02-PERT_CPM/)
 
-- [`> Fluxo Máximo <`](./03-Fluxo_Maximo/)
+3) &nbsp;[`> Fluxo Máximo <`](./03-Fluxo_Maximo/)
 
-- [`> Cobertura de Vértices <`](./04-Cobertura_Vertices/)
+4) &nbsp;[`> Cobertura de Vértices <`](./04-Cobertura_Vertices/)
 
-- [`> Conjuntos Independentes <`](./05-Conjuntos_Independentes/)
+5) &nbsp;[`> Conjuntos Independentes <`](./05-Conjuntos_Independentes/)
+
+6) &nbsp;[`> Coloração <`](./06-Coloracao/)
