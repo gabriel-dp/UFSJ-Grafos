@@ -11,3 +11,5 @@ All works made during Graphs subject taught by Professor Vinicius Vieira
 - [`> Fluxo Máximo <`](./03-Max_Flow/)
 
 - [`> Cobertura de Vértices <`](./04-Cobertura_Vertices/)
+
+- [`> Conjuntos Independentes <`](./05-Conjuntos_Independentes/)
