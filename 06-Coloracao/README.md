@@ -93,7 +93,6 @@ As `K` primeiras linhas contém o identificador das `K` cores usadas na soluçã
 [ 4][ 2][ 6][ 7][ 5][ 9][ 8][ 3]
 [ 9][ 5][ 4][ 8][ 2][ 3][ 7][10]
 [10][ 8][ 3][ 6][11][12][ 9][ 2]
-
 ```
 
 > O exemplo acima é gerado a partir do arquivo de teste [`> tests/board.gml <`](./tests/board.gml)
