@@ -4,6 +4,8 @@ All works made during Graphs subject taught by Professor Vinicius Vieira
 
 ## Works
 
+0) &nbsp;[`> Problema do Caixeiro Viajante usando Algoritmos Genéticos <`](./00-PCV_Genetico/)
+
 1) &nbsp;[`> Componentes Fortemente Conectados <`](./01-CFC/)
 
 2) &nbsp;[`> PERT/CPM <`](./02-PERT_CPM/)
